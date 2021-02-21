@@ -1,0 +1,222 @@
+<div *ngIf="permisos.ver">
+  <h1 id="tableLabel">Usuarios</h1>
+  <p *ngIf="!listUsers"><em>Loading...</em></p>
+  <div *ngIf="!edit">
+    <input type="text" [(ngModel)]="term" placeholder="Filtrar..." >
+    <table class='table table-striped' aria-labelledby="tableLabel">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Username</th>
+          <th>NombresCompletos</th>
+          <th>Telefono</th>
+          <th>Direccion</th>
+          <th>Email</th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of listUsers | filter:term">
+          <td>{{ item.id }}</td>
+          <td>{{ item.username }}</td>
+          <td>{{ item.nombresCompletos }}</td>
+          <td>{{ item.telefono }}</td>
+          <td>{{ item.direccion }}</td>
+          <td>{{ item.email }}</td>
+          <td><button type="button" *ngIf="permisos.editar" (click)="select(item)">Editar</button></td>
+          <td><button type="button"  *ngIf="permisos.eliminar" (click)="delete(item)">Eliminar</button></td>
+        </tr>
+
+      </tbody>
+
+    </table>
+    <button type="button" class="btn btn-primary" *ngIf="permisos.crear" (click)="Nuevo();">Nuevo usuario</button>
+  </div>
+  <div *ngIf="edit">
+    <form action="#" id="form" class="horizontal-form" #form="ngForm" (ngSubmit)="Guardar()">
+      <div class="row">
+        <h3>Usuario</h3>
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <label for="">Username</label>
+              <input type="text" class="form-control " #Username="ngModel" required required minlength="4"
+                [readonly]="user.id>0" maxlength="50" name="Username" placeholder="Nombre de usuario"
+                [(ngModel)]="user.username">
+              <div *ngIf="Username.invalid && (Username.dirty || Username.touched) " class="font-red">
+                <div *ngIf="Username.errors.required">
+                  Nombre de usuario es requerido
+                </div>
+                <div *ngIf="Username.errors.minlength">
+                  Minimo 4 caracteres
+                </div>
+                <div *ngIf="Username.errors.maxlength">
+                  maximo 50 caracteres
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="form-group">
+                <label class="control-label">Nombres</label><span class="font-red" *ngIf="!Nombres.valid">*</span>
+                <input type="text" class="form-control " #Nombres="ngModel" required required minlength="4"
+                  maxlength="50" name="Nombres" placeholder="Nombre de usuario" [(ngModel)]="user.nombres">
+                <div *ngIf="Nombres.invalid && (Nombres.dirty || Nombres.touched) " class="font-red">
+                  <div *ngIf="Nombres.errors.required">
+                    Nombre de usuario es requerido
+                  </div>
+                  <div *ngIf="Nombres.errors.minlength">
+                    Minimo 4 caracteres
+                  </div>
+                  <div *ngIf="Nombres.errors.maxlength">
+                    maximo 50 caracteres
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="form-group">
+                <label class="control-label">Apellidos</label><span class="font-red" *ngIf="!Apellidos.valid">*</span>
+                <input type="text" class="form-control " #Apellidos="ngModel" required required minlength="4"
+                  maxlength="50" name="Apellidos" placeholder="Nombre de usuario" [(ngModel)]="user.apellidos">
+                <div *ngIf="Apellidos.invalid && (Nombres.dirty || Apellidos.touched) " class="font-red">
+                  <div *ngIf="Apellidos.errors.required">
+                    Nombre de usuario es requerido
+                  </div>
+                  <div *ngIf="Apellidos.errors.minlength">
+                    Minimo 4 caracteres
+                  </div>
+                  <div *ngIf="Apellidos.errors.maxlength">
+                    maximo 50 caracteres
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="form-group">
+                <label class="control-label">Fecha de nacimiento</label><span class="font-red"
+                  *ngIf="!fechaNacimiento.valid">*</span>
+                <input type="date" class="form-control " #fechaNacimiento="ngModel" required required minlength="4"
+                  maxlength="50" name="fechaNacimiento" placeholder="Nombre de usuario"
+                  [(ngModel)]="fechaNac">
+                <div *ngIf="fechaNacimiento.invalid && (Nombres.dirty || fechaNacimiento.touched) " class="font-red">
+                  <div *ngIf="fechaNacimiento.errors.required">
+                    Nombre de usuario es requerido
+                  </div>
+                  <div *ngIf="fechaNacimiento.errors.minlength">
+                    Minimo 4 caracteres
+                  </div>
+                  <div *ngIf="fechaNacimiento.errors.maxlength">
+                    maximo 50 caracteres
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="form-group">
+                <label class="control-label">Correo</label><span class="font-red" *ngIf="!Email.valid">*</span>
+                <input type="email" class="form-control " #Email="ngModel" required required minlength="4"
+                  maxlength="50" name="Email" placeholder="Correo" [(ngModel)]="user.email">
+                <div *ngIf="Email.invalid && (Email.dirty || Email.touched) " class="font-red">
+                  <div *ngIf="Email.errors.required">
+                    Email es requerido
+                  </div>
+                  <div *ngIf="Email.errors.minlength">
+                    Minimo 4 caracteres
+                  </div>
+                  <div *ngIf="Email.errors.maxlength">
+                    maximo 50 caracteres
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="form-group">
+                <label class="control-label">Teléfono</label><span class="font-red" *ngIf="!phone.valid">*</span>
+                <input type="text" class="form-control " #phone="ngModel" required required minlength="4" maxlength="20"
+                  name="phone" placeholder="Teléfono" [(ngModel)]="user.telefono">
+                <div *ngIf="phone.invalid && (phone.dirty || phone.touched) " class="font-red">
+                  <div *ngIf="phone.errors.required">
+                    Telefono es requerido
+                  </div>
+                  <div *ngIf="phone.errors.minlength">
+                    Minimo 4 caracteres
+                  </div>
+                  <div *ngIf="phone.errors.maxlength">
+                    maximo 20 caracteres
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="form-group">
+                <label class="control-label">Dirección</label><span class="font-red" *ngIf="!direccion.valid">*</span>
+                <input type="text" class="form-control " #direccion="ngModel" required required minlength="4"
+                  maxlength="20" name="direccion" placeholder="Direccion" [(ngModel)]="user.direccion">
+                <div *ngIf="direccion.invalid && (direccion.dirty || direccion.touched) " class="font-red">
+                  <div *ngIf="direccion.errors.required">
+                    Telefono es requerido
+                  </div>
+                  <div *ngIf="direccion.errors.minlength">
+                    Minimo 4 caracteres
+                  </div>
+                  <div *ngIf="direccion.errors.maxlength">
+                    maximo 20 caracteres
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-xs-12">
+              <div class="form-group">
+                <label class="control-label">Rol</label><span class="font-red" *ngIf="!Rol.valid">*</span>
+
+                <select name="rolesId" #Rol="ngModel" required [(ngModel)]="user.rolesId" class="form-control">
+                  <option *ngFor="let item of listRoles" [value]="item.id">{{item.roleName}}</option>
+                </select>
+                <div *ngIf="Rol.invalid && (Rol.dirty || Rol.touched) " class="font-red">
+                  <div *ngIf="Rol.errors.required">
+                    Rol es requerido
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4 col-xs-12">
+              <div class="form-group">
+                <label class="control-label">Password</label><span class="font-red" *ngIf="!Password.valid">*</span>
+                <input type="password" class="form-control " #Password="ngModel" [required]="user.id==undefined"
+                  minlength="3" maxlength="20" name="password" placeholder="Password" [(ngModel)]="user.password">
+                <div *ngIf="Password.invalid && (Password.dirty || Password.touched) " class="font-red">
+                  <div *ngIf="Password.errors.required">
+                    Telefono es requerido
+                  </div>
+                  <div *ngIf="Password.errors.minlength">
+                    Minimo 3 caracteres
+                  </div>
+                  <div *ngIf="Password.errors.maxlength">
+                    maximo 20 caracteres
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <button class="btn btn-primary" type="submit" name="button1" [disabled]="!form.valid || this.loading">
+          <i [ngClass]="{'fa-save':!this.loading,'fa-refresh fa-spin':this.loading}" class="fa"></i>
+          <span *ngIf="!this.loading">Guardar cambios</span>
+          <span *ngIf="this.loading">Espere por favor</span>
+        </button>
+        <button type="button" class="btn btn-default" (click)="Cancelar();">Cancelar</button>
+      </div>
+    </form>
+  </div>
+  <div class="alert {{alert}}">
+      <p>{{mensaje}}</p>
+  </div>
+</div>

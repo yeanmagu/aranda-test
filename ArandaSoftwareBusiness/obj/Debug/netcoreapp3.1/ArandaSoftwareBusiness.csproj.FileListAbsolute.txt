@@ -1,0 +1,14 @@
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\obj\Debug\netcoreapp3.1\ArandaSoftwareBusiness.csprojAssemblyReference.cache
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\obj\Debug\netcoreapp3.1\ArandaSoftwareBusiness.AssemblyInfoInputs.cache
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\obj\Debug\netcoreapp3.1\ArandaSoftwareBusiness.AssemblyInfo.cs
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\obj\Debug\netcoreapp3.1\ArandaSoftwareBusiness.csproj.CoreCompileInputs.cache
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\bin\Debug\netcoreapp3.1\ArandaSoftwareBusiness.deps.json
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\bin\Debug\netcoreapp3.1\ArandaSoftwareBusiness.dll
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\bin\Debug\netcoreapp3.1\ArandaSoftwareBusiness.pdb
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\bin\Debug\netcoreapp3.1\ArandaSoftwareData.dll
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\bin\Debug\netcoreapp3.1\ArandaSoftwareEntities.dll
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\bin\Debug\netcoreapp3.1\ArandaSoftwareData.pdb
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\bin\Debug\netcoreapp3.1\ArandaSoftwareEntities.pdb
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\obj\Debug\netcoreapp3.1\ArandaSoftwareBusiness.csproj.CopyComplete
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\obj\Debug\netcoreapp3.1\ArandaSoftwareBusiness.dll
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareBusiness\obj\Debug\netcoreapp3.1\ArandaSoftwareBusiness.pdb

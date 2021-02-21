@@ -1,0 +1,53 @@
+<h1 id="tableLabel">Iniciar sesion</h1>
+<div class="col-md-6 col-md-offset-3">
+
+
+  <form action="#" id="form" class="horizontal-form" #form="ngForm" (ngSubmit)="Guardar()">
+    <div class="row">
+      <div class="col-md-12 form-group">
+        <label for="">Username</label>
+        <input type="text" class="form-control " #Username="ngModel" required minlength="4" maxlength="50"
+          name="Username" placeholder="Nombre de usuario" [(ngModel)]="user.username">
+        <div *ngIf="Username.invalid && (Username.dirty || Username.touched) " class="font-red">
+          <div *ngIf="Username.errors.required">
+            Nombre de usuario es requerido
+          </div>
+          <div *ngIf="Username.errors.minlength">
+            Minimo 4 caracteres
+          </div>
+          <div *ngIf="Username.errors.maxlength">
+            maximo 50 caracteres
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12 col-xs-12">
+        <div class="form-group">
+          <label class="control-label">Password</label><span class="font-red" *ngIf="!Password.valid">*</span>
+          <input type="password" class="form-control " #Password="ngModel" required required minlength="3"
+            maxlength="20" name="password" placeholder="Password" [(ngModel)]="user.password">
+          <div *ngIf="Password.invalid && (Password.dirty || Password.touched) " class="font-red">
+            <div *ngIf="Password.errors.required">
+              Telefono es requerido
+            </div>
+            <div *ngIf="Password.errors.minlength">
+              Minimo 3 caracteres
+            </div>
+            <div *ngIf="Password.errors.maxlength">
+              maximo 20 caracteres
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <button class="btn btn-primary" type="submit" name="button1" [disabled]="!form.valid || this.loading">
+          <i [ngClass]="{'fa-save':!this.loading,'fa-refresh fa-spin':this.loading}" class="fa"></i>
+          <span *ngIf="!this.loading">Login</span>
+          <span *ngIf="this.loading">Espere por favor</span>
+        </button>
+      </div>
+    
+    </div>
+  </form>
+</div>

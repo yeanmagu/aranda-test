@@ -1,0 +1,10 @@
+D:\Code\ArandaSoftwareTest\ArandaSoftwareData\bin\Debug\netcoreapp2.2\ArandaSoftwareData.deps.json
+D:\Code\ArandaSoftwareTest\ArandaSoftwareData\bin\Debug\netcoreapp2.2\ArandaSoftwareData.dll
+D:\Code\ArandaSoftwareTest\ArandaSoftwareData\obj\Debug\netcoreapp2.2\ArandaSoftwareData.csprojAssemblyReference.cache
+D:\Code\ArandaSoftwareTest\ArandaSoftwareData\obj\Debug\netcoreapp2.2\ArandaSoftwareData.AssemblyInfoInputs.cache
+D:\Code\ArandaSoftwareTest\ArandaSoftwareData\obj\Debug\netcoreapp2.2\ArandaSoftwareData.AssemblyInfo.cs
+D:\Code\ArandaSoftwareTest\ArandaSoftwareData\obj\Debug\netcoreapp2.2\ArandaSoftwareData.csproj.CoreCompileInputs.cache
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareData\obj\Debug\netcoreapp2.2\ArandaSoftwareData.csprojAssemblyReference.cache
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareData\obj\Debug\netcoreapp2.2\ArandaSoftwareData.AssemblyInfoInputs.cache
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareData\obj\Debug\netcoreapp2.2\ArandaSoftwareData.AssemblyInfo.cs
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareData\obj\Debug\netcoreapp2.2\ArandaSoftwareData.csproj.CoreCompileInputs.cache

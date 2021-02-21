@@ -1,0 +1,8 @@
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareEntities\bin\Debug\netcoreapp3.1\ArandaSoftwareEntities.deps.json
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareEntities\bin\Debug\netcoreapp3.1\ArandaSoftwareEntities.dll
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareEntities\bin\Debug\netcoreapp3.1\ArandaSoftwareEntities.pdb
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareEntities\obj\Debug\netcoreapp3.1\ArandaSoftwareEntities.AssemblyInfoInputs.cache
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareEntities\obj\Debug\netcoreapp3.1\ArandaSoftwareEntities.AssemblyInfo.cs
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareEntities\obj\Debug\netcoreapp3.1\ArandaSoftwareEntities.csproj.CoreCompileInputs.cache
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareEntities\obj\Debug\netcoreapp3.1\ArandaSoftwareEntities.dll
+D:\Code\PruebasTec\ArandaSoftwareTest\ArandaSoftwareEntities\obj\Debug\netcoreapp3.1\ArandaSoftwareEntities.pdb
